@@ -20,5 +20,4 @@ async def list_sales(page: int = 1):
     return await gumroad_get("/v2/sales", {"page": page})
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(mcp.app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+    mcp.run()
